@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPB · Sistem Penerimaan Barang Sparepart</title>
+  <meta name="description" content="Sistem Penerimaan Barang Sparepart — Dashboard, Input Form Multi-Step, Detail & QC. Terintegrasi Supabase & Teamly Webhook." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- CSS Terpisah -->
+  <link rel="stylesheet" href="frontend/css/style.css?v=62" />
+</head>
+<body>
+  <div id="app" aria-live="polite"></div>
+
+  <!-- Toast Container -->
+  <div id="toasts" class="toast-container" aria-live="assertive"></div>
+
+  <!-- Supabase-js (CDN, UMD) — HARUS dimuat sebelum auth.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+  <!-- Export Laporan: SheetJS (Excel) & jsPDF + autotable (PDF) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- JS Terpisah: urutan penting (config → auth → data layer → views → app) -->
+  <script src="frontend/js/config.js?v=3"></script>
+  <script src="frontend/js/auth.js?v=3"></script>
+  <script src="frontend/js/supabaseClient.js?v=6"></script>
+  <script src="frontend/js/teamly.js"></script>
+  <script src="frontend/js/odoo.js?v=3"></script>
+  <script src="frontend/js/dashboard.js?v=20"></script>
+  <script src="frontend/js/inputBarang.js?v=6"></script>
+  <script src="frontend/js/detailQc.js?v=12"></script>
+  <script src="frontend/js/login.js?v=5"></script>
+  <script src="frontend/js/addUser.js?v=5"></script>
+  <script src="frontend/js/resetPassword.js?v=1"></script>
+  <script src="frontend/js/users.js?v=3"></script>
+  <script src="frontend/js/whOutClient.js?v=17"></script>
+  <script src="frontend/js/whOut.js?v=4"></script>
+  <script src="frontend/js/whOutDetail.js?v=16"></script>
+  <script src="frontend/js/karyawan.js?v=12"></script>
+  <script src="frontend/js/laporan.js?v=58"></script>
+  <script src="frontend/js/stokBarangClient.js?v=5"></script>
+  <script src="frontend/js/stokBarang.js?v=15"></script>
+  <script src="frontend/js/overview.js?v=6"></script>
+  <script src="frontend/js/pesananClient.js?v=3"></script>
+  <script src="frontend/js/permintaan.js?v=10"></script>
+  <script src="frontend/js/pesan.js?v=39"></script>
+  <script src="frontend/js/app.js?v=26"></script>
+</body>
+</html>
